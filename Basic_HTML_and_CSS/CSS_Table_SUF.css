@@ -1,0 +1,19 @@
+table {
+		border: 1px solid lime;
+}
+
+td:hover {
+	background-color: lightgray;
+	color: darkred;
+}
+
+tr, th {
+	background-color: darkgray;
+	color: orange;
+}
+
+tr, td {
+	background-color: green;
+	color: yellow;
+	font: noto-sans-japanese
+}
