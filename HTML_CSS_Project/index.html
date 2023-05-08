@@ -3,15 +3,17 @@
 	<head>
 		<title>The Space Station | Resort</title>
 		<meta charset="utf-8">
+		<link rel="stylesheet" href="./css/shared.css">
+		<link rel="stylesheet" href="./css/animations.css">
 	</head>
 	<body>
 	
 
 		<!-- Nav -->
-		<div>
-			<div>
-				<ul>
-					<a href="#home" id="link"><li>HOME</li></a>
+		<div class="wrap">
+			<div class="menu-container">
+				<ul class="menu">
+					<a href="#home"><li>HOME</li></a>
 					<a href="#gallery"><li>GALLERY</li></a>
 					<a href="#contact"><li>RESERVATIONS</li></a>
 				</ul>
@@ -21,38 +23,38 @@
 		
 		<!--Home -->
 		<div id="home">
-			<div>
-				<div>
-					<span>The Space Station</span>
+			<div class="container">
+				<div class="text-center">
+					<span class="head-main">The Space Station</span>
 				</div>
 			</div>
 		</div>
 		<!--End Home-->
 		
 		<!--Gallery -->
-		<section>
-			<div id="gallery">
+		<section id="gallery">
+			<div class="container">
 				<h1>Gallery</h1>
-				<div>
+				<div class="flex-container">
 					
-					<!-- Photo-Container 1 -->
-					<div>
-						<div>
-							<img src="./images/thumb/thumbnail_1.png" alt="telescope photo of a universe" width="500" height="300">
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p>We have several space launches departing daily, book your flight today!</p>
+					<!--Photo container 1-->
+					<div class="photo-container">
+						<div class="photo">
+							<img src="./images/thumb/thumbnail_1.png" alt="Starry galaxy." width="500" height="300">
+							<div class="photo-overlay">
+								<h3 class="white-head">Click to enlarge</h3>
+								<p>We have several launches departing daily, book your flight today!</p>
 							</div>
 						</div>
 					</div>
-					<!-- End Photo-Container 1 -->
+					<!--End photo container 1-->
 					
 					<!-- Photo-Container 2 -->
-					<div>
-						<div>
-							<img src="./images/thumb/thumbnail_2.png" alt="a cloud of galaxies in space" width="500" height="300">
-							<div>
-								<h3>Click to Enlarge</h3>
+					<div class="photo-container">
+						<div class="photo">
+							<img src="./images/thumb/thumbnail_2.png" alt="Red finger-like clouds with red stars in space." width="500" height="300">
+							<div class="photo-overlay">
+								<h3 class="white-head">Click to enlarge</h3>
 								<p>These are space fingers!</p>
 							</div>
 						</div>
@@ -60,11 +62,11 @@
 					<!-- End Photo-Container 2 -->
 					
 					<!-- Photo-Container 3 -->
-					<div>
-						<div>
-							<img src="./images/thumb/thumbnail_3.png" alt="another telescope photo of a universe" width="500" height="300">
-							<div>
-								<h3>Click to Enlarge</h3>
+					<div class="photo-container">
+						<div class="photo">
+							<img src="./images/thumb/thumbnail_3.png" alt="Large scale image of space." width="500" height="300">
+							<div class="photo-overlay">
+								<h3 class="white-head">Click to enlarge</h3>
 								<p>This is a space cloud!</p>
 							</div>
 						</div>
@@ -72,11 +74,11 @@
 					<!-- End Photo-Container 3 -->
 					
 					<!-- Photo-Container 4 -->
-					<div>
-						<div>
-							<img src="./images/thumb/thumbnail_4.png" alt="A moon named Lua" width="500" height="300">
-							<div>
-								<h3>Click to Enlarge</h3>
+					<div class="photo-container">
+						<div class="photo">
+							<img src="./images/thumb/thumbnail_4.png" alt="Fictional moon named Lua." width="500" height="300">
+							<div class="photo-overlay">
+								<h3 class="white-head">Click to enlarge</h3>
 								<p>This is a moon named Lua.</p>
 							</div>
 						</div>
@@ -84,11 +86,11 @@
 					<!-- End Photo-Container 4 -->
 					
 					<!-- Photo-Container 5 -->
-					<div>
-						<div>
-							<img src="./images/thumb/thumbnail_5.png" alt="a planet named Endor" width="500" height="300">
-							<div>
-								<h3>Click to Enlarge</h3>
+					<div class="photo-container">
+						<div class="photo">
+							<img src="./images/thumb/thumbnail_5.png" alt="The home of the Ewoks and master Yoda." width="500" height="300">
+							<div class="photo-overlay">
+								<h3 class="white-head">Click to enlarge</h3>
 								<p>This is Endor, pre-deathstar.</p>
 							</div>
 						</div>
@@ -96,11 +98,11 @@
 					<!-- End Photo-Container 5 -->
 					
 					<!-- Photo-Container 6 -->
-					<div>
-						<div>
-							<img src="./images/thumb/thumbnail_6.png" alt="another cloud of galaxies in space" width="500" height="300">
-							<div>
-								<h3>Click to Enlarge</h3>
+					<div class="photo-container">
+						<div class="photo">
+							<img src="./images/thumb/thumbnail_6.png" alt="Dark and spooky outer space." width="500" height="300">
+							<div class="photo-overlay">
+								<h3 class="white-head">Click to enlarge</h3>
 								<p>More space clouds!</p>
 							</div>
 						</div>
@@ -108,23 +110,23 @@
 					<!-- End Photo-Container 6 -->
 					
 					<!-- Photo-Container 7 -->
-					<div>
-						<div>
-							<img src="./images/thumb/thumbnail_7.png" alt="Dramatic purple galaxy" width="500" height="300">
-							<div>
-								<h3>Click to Enlarge</h3>
-								<p>A few more space clouds.</p>
+					<div class="photo-container">
+						<div class="photo">
+							<img src="./images/thumb/thumbnail_7.png" alt="A black Hole" width="500" height="300">
+							<div class="photo-overlay">
+								<h3 class="white-head">Click to enlarge</h3>
+								<p>A Black Hole.</p>
 							</div>
 						</div>
 					</div>
 					<!-- End Photo-Container 7 -->
 					
 					<!-- Photo-Container 8 -->
-					<div>
-						<div>
-							<img src="./images/thumb/thumbnail_8.png" alt="God." width="500" height="300">
-							<div>
-								<h3>Click to Enlarge</h3>
+					<div class="photo-container">
+						<div class="photo">
+							<img src="./images/thumb/thumbnail_8.png" alt="God's Physical form." width="500" height="300">
+							<div class="photo-overlay">
+								<h3 class="white-head">Click to enlarge</h3>
 								<p>God.</p>
 							</div>
 						</div>
@@ -132,11 +134,11 @@
 					<!-- End Photo-Container 8 -->
 					
 					<!-- Photo-Container 9 -->
-					<div>
-						<div>
-							<img src="./images/thumb/thumbnail_9.png" alt="HQ spiral galaxy" width="500" height="300">
-							<div>
-								<h3>Click to Enlarge</h3>
+					<div class="photo-container">
+						<div class="photo">
+							<img src="./images/thumb/thumbnail_9.png" alt="Spinning galaxy" width="500" height="300">
+							<div class="photo-overlay">
+								<h3 class="white-head">Click to enlarge</h3>
 								<p>High quality image of space.</p>
 							</div>
 						</div>
@@ -149,27 +151,27 @@
 		<!-- End Gallery -->
 		
 		<!-- RSVP -->
-		<section>
-			<div id="contact">
-				<div>
-					<h1>Reservations</h1>
-					<div>
+		<section id="contact">
+			<div class="container">
+				<div class="heading-padding">
+					<h1 class="heading-padding">Reservations</h1>
+					<div class="reservation">
 						<h2><span>Your adventure is just around the moon!</span>
 							<br />Reserve your flight today!
 						</h2>
-						<p>
-							Please provide use with your basic contact information.
+						<p class="rsvp-text">
+							Please provide us with your basic contact information.
 						</p>
-						<div>
-							<form action="" method-"post">
-								<input class="rsvp" type="text" value="First Name">
-								<input class="rsvp" type="text" value="Last Name">
-								<input class="rsvp" type="text" value="Email Address">
-								<input class="rsvp" type="text" value="Phone Number">
+						<div class="form-rsvp">
+							<form action="" method="post">
+								<input class="rsvp" type="text" value="" placeholder="First Name">
+								<input class="rsvp" type="text" value="" placeholder="Last Name">
+								<input class="rsvp" type="text" value="" placeholder="Email Address">
+								<input class="rsvp" type="text" value="" placeholder="Phone Number">
 								<div class="form-spacer">
 									<label class="terms">Terms and Conditions</label>
 								</div>
-								<div>
+								<div class="submit">
 									<input type="submit" value="Submit">
 								</div>
 							</form>
@@ -181,7 +183,7 @@
 		<!-- End RSVP -->
 		
 		<!-- Footer -->
-		<div>
+		<div id="footer">
 			www.thespacestation.space &nbsp;|&nbsp; &copy; 2023
 		</div>
 		<!-- End Footer -->
