@@ -21,7 +21,7 @@
     border-radius: 6px;
     /* background-color */
     cursor: pointer;
-    transition-property: background;
+    transition-property: all;
     transition-duration: .4s;
     transition-delay: 0s;
     transition-timing-function: ease-in-out;
@@ -43,15 +43,28 @@
     border: 1px solid #021a40;
     background-color: #ff0;
     box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px;
+    max-width: 100%;
 }
 
 .photo-container {
+    display: inline-block;
     text-align: center;
     margin: 15px auto;
+    box-sizing: border-box;
     width: 300px;
     height: 169px;
 }
 
+.photo-container img {
+    max-width: 100%;
+    width: 300px;
+    height: 169px;
+}
 .photo-overlay {
     color: #fff;
     position: absolute;
