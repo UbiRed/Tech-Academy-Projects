@@ -1,3 +1,14 @@
+#background-video {
+    position: fixed;
+    top: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    translate: translate(-50%, -50%);
+    align-content: center;
+}
+
 .center {
     display: block;
     margin-left: auto;
@@ -39,6 +50,46 @@ th {
     text-align: center;
     color: bisque;
     margin-top: 100px;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.container:hover .image {
+    opacity: 0.3;
+}
+
+.container:hover img {
+    transition: 1s ease;
+    filter: blur(8px);
+}
+
+.container:hover .middle{
+    opacity: 1;
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.text {
+    background-color: #04AA6D;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
 }
 
 .top-right {
@@ -84,6 +135,12 @@ th {
     color: black;
 }
 
+.para {
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+
 .row {
     display: flex;
 }
@@ -92,6 +149,8 @@ th {
     border: 2px solid black;
     margin: auto;
     text-align: center;
+    margin-left: 350px;
+    margin-right: 350px;
 }
 
 .nsx-link {
@@ -115,3 +174,4 @@ th {
 .nsx-link:active {
     color: yellow;
 }
+
