@@ -1,0 +1,117 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: 2 px solid darkgray;
+    border-radius: 30px;
+}
+
+img {
+    filter: sepia(25%);
+    margin-bottom: 20px;
+}
+
+#footer {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin: auto;
+}
+
+th {
+    background-color: bisque;
+    font-size: large;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: bisque;
+    margin-top: 100px;
+}
+
+.top-right {
+    position: absolute;
+    top: 25px;
+    right: 250px;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: bisque;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background: darkorange;
+    color: black;
+}
+
+.main {
+    margin-top: 30px;
+}
+
+.column {
+    flex: 50%;
+    border: solid black;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.row {
+    display: flex;
+}
+
+.box {
+    border: 2px solid black;
+    margin: auto;
+    text-align: center;
+}
+
+.nsx-link {
+    color: darkblue;
+    text-decoration: underline;
+}
+
+.nsx-link:link {
+    color: green;
+}
+
+.nsx-link:visited {
+    color: blueviolet;
+}
+
+.nsx-link:hover {
+    color: aqua;
+    cursor: pointer;
+}
+
+.nsx-link:active {
+    color: yellow;
+}
