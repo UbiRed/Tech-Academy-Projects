@@ -173,13 +173,9 @@ th {
 
 .box {
     border: 2px solid black;
-    margin: auto;
     text-align: center;
     background-color: bisque;
-    display: inline-block;
-    padding: 10px;
 }
-
 .nsx-link {
     color: darkblue;
     text-decoration: underline;
