@@ -175,9 +175,9 @@ th {
     border: 2px solid black;
     margin: auto;
     text-align: center;
-    margin-left: 350px;
-    margin-right: 350px;
     background-color: bisque;
+    display: inline-block;
+    padding: 10px;
 }
 
 .nsx-link {
@@ -203,6 +203,7 @@ th {
 }
 
 #video_container {
+    position: relative;
     display: block;
     width: 25%;
     height: auto;
@@ -224,11 +225,20 @@ th {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 5;
 }
 
 .top-center {
     position: absolute;
-    top: 0%;
+    top: 0;
     left: 50%;
+    transform: translateX(-50%);
     translate: translate(-50%, -50%);
+    padding: 10px;
+    z-index: 6;
+    color: black;
+}
+
+.video_overlay {
+    position: relative;
 }
