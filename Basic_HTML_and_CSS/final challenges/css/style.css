@@ -175,6 +175,12 @@ th {
     border: 2px solid black;
     text-align: center;
     background-color: bisque;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    padding: 10px;
+    margin: 0 auto;
 }
 .nsx-link {
     color: darkblue;
