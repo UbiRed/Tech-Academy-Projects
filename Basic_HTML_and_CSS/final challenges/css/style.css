@@ -18,7 +18,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-    border: 2 px solid darkgray;
+    border: 2px solid darkgray;
     border-radius: 30px;
 }
 
@@ -34,7 +34,9 @@ img {
     margin-bottom: 10px;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid black;
     text-align: center;
     margin-bottom: 5px;
@@ -96,7 +98,7 @@ th {
     filter: blur(8px);
 }
 
-.container:hover .middle{
+.container:hover .middle {
     opacity: 1;
 }
 
@@ -175,12 +177,13 @@ th {
     border: 2px solid black;
     text-align: center;
     background-color: bisque;
-    display: inline-block;
-    justify-content: center;
     align-items: center;
     max-width: 400px;
     padding: 10px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex inline-block;
+    justify-content: center;
 }
 .nsx-link {
     color: darkblue;
@@ -215,7 +218,7 @@ th {
     text-align: center;
 }
 
-.video_container {
+.video-container {
     width: 25%;
     height: auto;
     margin: auto;
@@ -225,6 +228,8 @@ th {
     width: 360px;
     height: 640px;
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
     justify-content: center;
     align-items: center;
     z-index: 5;
@@ -241,6 +246,6 @@ th {
     color: black;
 }
 
-.video_overlay {
+.video-overlay {
     position: relative;
 }
