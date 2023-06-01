@@ -1,5 +1,5 @@
 //made an alert and assigned a string
-window.alert("Basic JS");
+window.alert("Basic JS Functions");
 
 //created two variables and assigned them both a string value
 var sent1="This is the beginning of the string",sent2=" and this is the end of the string";
@@ -8,6 +8,13 @@ var sent1="This is the beginning of the string",sent2=" and this is the end of t
 function My_First_Function() {
     var str="This is the button text!";
     document.getElementById("Button_Text").innerHTML=str;
+}
+
+//creating a basic function
+function myFunction() {
+  var sentence="I am learning";
+  sentence+=" a lot from this course!";
+  document.getElementById("concatenate").innerHTML=sentence;
 }
 
 // Define an array of colors
