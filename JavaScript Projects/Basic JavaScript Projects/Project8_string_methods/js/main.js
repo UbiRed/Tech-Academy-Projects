@@ -10,7 +10,7 @@ function full_Sentence() {
 
 // Extracts a section of text from a sentence and displays it
 function slice_method() {
-  var Sentence="All work and no plat makes Johnny a dull boy.";
+  var Sentence="All work and no play makes Johnny a dull boy.";
   var Section=Sentence.slice(27,33);
   document.getElementById("Slice").innerHTML=Section;
 }
