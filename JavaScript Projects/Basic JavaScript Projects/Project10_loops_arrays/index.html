@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>JS Project</title>
+		<meta charset="utf-8">
+		<script src="./js/main.js"></script>
+	</head>
+	<body>
+	
+        <p id="Counting_to_Ten"></p>
+        <button onclick="count_to_Ten()">Click here!</button>
+	
+		<p id="Loop"></p>
+        <button onclick="Call_Loop()">Click hereto execute the loop!</button>
+
+		<p id="Length"></p>
+		<button onclick="length_method()">Click here!</button>
+
+		<p id="List_of_Instruments"></p>
+		<button onclick="for_loop()">Click here!</button>
+
+		<p id="Cat"></p>
+		<button onclick="cat_pics()">Click here!</button>
+
+		<p id="Constant"></p>
+		<button onclick="constant_function()">Click here!</button>
+
+		<p id="Let_1"></p>
+		<button onclick="let_Method()">Click here!</button>
+
+		<p id="demo"></p>
+		<script>
+			document.getElementById("demo").innerHTML=myFunction("Keaton");
+
+			function myFunction(name) {
+				return "Hello "+name;
+			}
+		</script>
+
+		<p id="Car_Object"></p>
+		<script>
+			document.getElementById("Car_Object").innerHTML=car.description();
+		</script>
+
+		<p id="break_method"></p>
+		<script>
+			let text = "";
+			for (let i = 0; i < 10; i++) {
+			  if (i === 3) { break; }
+			  text += "The number is " + i + "<br>";
+			}
+			
+			document.getElementById("break_method").innerHTML = text;
+		</script>
+
+		<p id="demo_2"></p>
+		<script>
+			let text_2 = "";
+			for (let i = 0; i < 10; i++) {
+			  if (i === 3) { continue; }
+			  text_2 += "The number is " + i + "<br>";
+			}
+			document.getElementById("demo_2").innerHTML = text_2;
+		</script>
+
+	
+	</body>
+</html>
