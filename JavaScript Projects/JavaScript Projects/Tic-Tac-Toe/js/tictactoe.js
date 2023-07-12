@@ -2,6 +2,7 @@
 let activePlayer='X';
 //this array stores an array on moves. We use this to determine win conditions
 let selectedSquares=[];
+
 //This function is for placing an x or o in a square
 function placeXOrO(squareNumber) {
     //this condition ensures a square hasn't been selected already.
@@ -64,6 +65,9 @@ function placeXOrO(squareNumber) {
         }
     }
 }
+
+//this function parses the selectedSquares array to search for win cons
+//drawLine() function is called to draw a line on screen if the condition is met
 function checkWinConditions() {
     //X 0, 1, 2 condition
     if (arrayIncludes('0X','1X','2X')){ drawWinLine(50,100,558,100)}
@@ -72,11 +76,11 @@ function checkWinConditions() {
     //X 6, 7, 8 condition
     else if (arrayIncludes('6X','7X','8X')){ drawWinLine(50,508,558,508)}
     //X 0, 3, 6 condition
-    else if (arrayIncludes('0X','3X','6X')){ drawWinLine(100,50,500,558)}
+    else if (arrayIncludes('0X','3X','6X')){ drawWinLine(100,50,100,558)}
     //X 1, 4, 7 condition
     else if (arrayIncludes('1X','4X','7X')){ drawWinLine(304,50,304,558)}
     //X 2, 5, 8 condition
-    else if (arrayIncludes('2X','5X','8X')){ drawWinLine(508,50,50,558)}
+    else if (arrayIncludes('2X','5X','8X')){ drawWinLine(508,50,508,558)}
     //X 6, 4, 2 condition
     else if (arrayIncludes('6X','4X','2X')){ drawWinLine(100,508,510,90)}
     //X 0, 4, 8 condition
@@ -117,6 +121,7 @@ function checkWinConditions() {
         if (a===true&&b===true&&c===true) {return true;}
     }
 }
+
 //This function makes our body element temporarily unclickable
 function disableClick() {
     //This makes our body unclickable
@@ -124,6 +129,7 @@ function disableClick() {
     //This makes our body clickable again after 1 second
     setTimeout(function() {body.style.pointerEvents='auto';},1000);
 }
+
 //This function takes a string parameter of the path you set earlier for 
 //placement sound('./media/place.mp3)
 function audio(audioURL) {
@@ -132,6 +138,7 @@ function audio(audioURL) {
     //play method plays our audio sound
     audio.play();
 }
+
 //This function utilizes HTML canvas to draw win lines
 function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     //this line accesses our HTML canvas element
@@ -177,6 +184,13 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
             //this condition is similar to the one above
             //this is necessary for the 6,4,2 win conditions
             if (x >= x2 && y >= y2) { cancelAnimationFrame(animationLoop); }
+        }
+        //This condition is similar to the one above
+        //this is necessary for the 6, 4, 2 win cons
+        if (x1 <= x2 && y1 >= y2) {
+            if (x < x2) { x += 10; }
+            if (y > y2) { y -= 10; }
+            if (x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop); }
         }
     }
     //this function clears our canvas after our win line is drawn
