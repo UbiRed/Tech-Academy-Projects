@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>JS Project</title>
+		<meta charset="utf-8">
+		<script src="./js/JavaScript_1.js"></script>
+        <link rel="stylesheet" type="text/css" href="stylesheet/project.css">
+	</head>
+	<body>
+	
+        <h1>What is your favorite color?</h1>
+        <h3> Pick your favorite color from this list:</h3>
+
+        <ul>
+            <li>Red</li>
+            <li>Yellow</li>
+            <li>Green</li>
+            <li>Blue</li>
+            <li>Pink</li>
+            <li>Purple</li>
+        </ul>
+
+        <h3>Enter your choice below:</h3>
+
+        <input id="Color_Input" type="text">
+        <button onclick="Color_Function()">Sumbit Color</button>
+        <p id="Output"></p>
+
+        <h1 class="Click">This text will change!</h1>
+        <h3 class="Click">This text will not change.</h3>
+        <button onclick="Hello_World_Function()">Click Me!</button>
+
+        <canvas id="myCanvas" width="500" height="250"></canvas>
+        
+        <canvas id="myCanvas_1" width="500" height="250"></canvas>
+
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.font = "30px Arial";
+            ctx.strokeText("Hello World", 10, 50);
+        </script>
+
+        <script>
+            var u = document.getElementById("myCanvas_1");
+            var ctx = u.getContext("2d");
+            
+            // Create gradient
+            var grd = ctx.createLinearGradient(0, 0, 200, 0);
+            grd.addColorStop(0, "red");
+            grd.addColorStop(1, "Black");
+            
+            // Fill with gradient
+            ctx.fillStyle = grd;
+            ctx.fillRect(10, 10, 150, 80);
+        </script>
+
+            <!--Contact form-->
+        <div class="Row" id="Contact">
+            <!--Contact form-->
+            <div class="Column_1 Column_tall">
+                <h1>Contact</h1>
+                <!--This specifies where and how to send the form data; we are leaving it blank-->
+                <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
+                    <label>Name:</label>
+                        <input type="text" placeholder="Please enter your name here">
+                    <label>Email:</label>
+                        <input type="text" id="Email" name="Email" 
+                            placeholder="Please enter your email here">
+                    <label>Message:</label>
+                        <input type="text" id="Message" name="Message" 
+                            placeholder="Please write your message here">
+                        <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <ol>
+                <li data-family_relation ="father">Mark</li>
+                <li data-family_relation ="mother">Kelly</li>
+                <li data-family_relation ="sister">Maxine</li>
+            </ol>
+        </div>
+
+        <div>
+            <h1>Characters</h1>
+            <h3>Click on a universe to see a character!</h3>
+
+            <ul>
+                <li onclick="displayType(this)" id="DC"
+                    data-character-type="Batman">DC</li>
+                <li onclick="displayType(this)" id="Star Wars"
+                    data-character-type="Luke Skywalker">Star Wars</li>
+                <li onclick="displayType(this)" id="Marvel"
+                    data-character-type="Thor">Marvel</li>
+                <li onclick="displayType(this)" id="Doctor Who"
+                    data-character-type="The Doctor">Doctor Who</li>   
+            </ul>
+        </div>
+
+        <p id="displayBrands"></p>
+
+        <script>
+            let favs = "";
+
+            favs = (val) => "My favorite car brands are: " + val;
+
+            document.getElementById("displayBrands").innerHTML = favs("Honda, Lucid, Volkswagen and Rimac");
+        </script>
+
+        <p id="displayHeroes"></p>
+
+        <script>
+            var favs_1="";
+            var heroes="Batman, Birdman, and Beetlejuice!"
+            
+            function displayFavorites(val) {
+                favs_1="My favorite superheros are: "+val;
+            }
+
+            displayFavorites(heroes);
+            document.getElementById("displayHeroes").innerHTML=favs_1;
+        </script>
+
+        <button onclick="myFunction_5()">Cick me!</button>
+        <p id="displayAge"></p>
+
+	
+	</body>
+</html>
