@@ -68,7 +68,6 @@ function Handle_Operator(Next_Operator) {
     Calculator.Wait_Second_Operand = true;
     Calculator.operator = Next_Operator;
 }
-
 const Perform_Calculation = {
     '/': (First_Operand, Second_Operand) => First_Operand / Second_Operand,
     '*': (First_Operand, Second_Operand) => First_Operand * Second_Operand,
@@ -77,7 +76,7 @@ const Perform_Calculation = {
     '=': (First_Operand, Second_Operand) => Second_Operand
 };
 function Calculator_Reset() {
-    Calculator.Display_Value = '0'
+    Calculator.Display_Value = '0';
     Calculator.First_Operand = null;
     Calculator.Wait_Second_Operand = false;
     Calculator.operator = null;
@@ -89,6 +88,7 @@ function Update_Display() {
     const display = document.querySelector('.calculator-screen');
     display.value = Calculator.Display_Value;
 }
+
 Update_Display();
 //this section monitors button clicks
 const keys = document.querySelector('.calculator-keys');
