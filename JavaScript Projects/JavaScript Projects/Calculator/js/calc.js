@@ -15,10 +15,12 @@ function Input_Digit(digit) {
     const { Display_Value, Wait_Second_Operand } = Calculator;
 
     // Check if the current Display_Value is a single digit and the Wait_Second_Operand is false
-    if (Display_Value.length === 1 && Display_Value === '0' && !Wait_Second_Operand) {
+    if (Wait_Second_Operand === true) {
         Calculator.Display_Value = digit;
+        Calculator.Wait_Second_Operand = false;
     } else {
-        Calculator.Display_Value += digit;
+        Calculator.Display_Value =
+            Display_Value === "0" ? digit : Display_Value + digit;
     }
 }
 
