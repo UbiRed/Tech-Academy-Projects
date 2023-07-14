@@ -12,16 +12,13 @@ const Calculator = {
 
 //This modifies value each time a button is clicked on
 function Input_Digit(digit) {
-    const {Display_Value, Wait_Second_Operand } = Calculator;
-    //This checks if the Wait_Second_Operand is true and sets Display_Value
-    //to the key that was clicked on
-    if (Wait_Second_Operand === true) {
+    const { Display_Value, Wait_Second_Operand } = Calculator;
+
+    // Check if the current Display_Value is '0' and the Wait_Second_Operand is false
+    if (Display_Value === '0' && !Wait_Second_Operand) {
         Calculator.Display_Value = digit;
-        Calculator.Wait_Second_Operand = false;
     } else {
-        //This overwrites Display_Value if the current valueis 0
-        //otherwise it adds onto it
-        Calculator.Display_Value = Display_Value === '0' ? digit : Display_Value + digit;
+        Calculator.Display_Value += digit;
     }
 }
 
@@ -68,7 +65,6 @@ function Handle_Operator(Next_Operator) {
     Calculator.Wait_Second_Operand = true;
     Calculator.operator = Next_Operator;
 }
-
 const Perform_Calculation = {
     '/': (First_Operand, Second_Operand) => First_Operand / Second_Operand,
     '*': (First_Operand, Second_Operand) => First_Operand * Second_Operand,
@@ -77,7 +73,7 @@ const Perform_Calculation = {
     '=': (First_Operand, Second_Operand) => Second_Operand
 };
 function Calculator_Reset() {
-    Calculator.Display_Value = '0'
+    Calculator.Display_Value = '0';
     Calculator.First_Operand = null;
     Calculator.Wait_Second_Operand = false;
     Calculator.operator = null;
@@ -89,6 +85,7 @@ function Update_Display() {
     const display = document.querySelector('.calculator-screen');
     display.value = Calculator.Display_Value;
 }
+
 Update_Display();
 //this section monitors button clicks
 const keys = document.querySelector('.calculator-keys');
@@ -119,3 +116,14 @@ keys.addEventListener('click', (event) => {
     Input_Digit(target.value);
     Update_Display();
 })
+
+function Input_Decimal(dot) {
+    if (Calculator.Wait_Second_Operand === true) return;
+    if (!Calculator.Display_Value.includes(dot)) {
+        Calculator.Display_Value += dot;
+    }
+    // Add the following condition to remove the leading '0'
+    if (Calculator.Display_Value === '0' && dot !== '.') {
+        Calculator.Display_Value = dot;
+    }
+}
