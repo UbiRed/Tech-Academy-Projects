@@ -1,0 +1,251 @@
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#background-video video {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: 2px solid darkgray;
+    border-radius: 30px;
+}
+
+img {
+    filter: sepia(25%);
+    margin-bottom: 20px;
+}
+
+#footer {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin: auto;
+    background-color: #EADDCA;
+}
+
+th {
+    background-color: bisque;
+    font-size: large;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: bisque;
+    margin-top: 100px;
+    z-index: 1;
+    display: inline-block;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(0);
+    transition: backdrop-filter 0.5s;
+}
+
+.container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.container:hover .image {
+    opacity: 0.3;
+}
+
+.container:hover img {
+    transition: 1s ease;
+    filter: blur(8px);
+}
+
+.container:hover .middle {
+    opacity: 1;
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.text {
+    background-color: #04AA6D;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+.top-right {
+    position: absolute;
+    top: 25px;
+    right: 250px;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: bisque;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    z-index: 100;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background: darkorange;
+    color: black;
+}
+
+.main {
+    margin-top: 30px;
+}
+
+.column {
+    flex: 50%;
+    border: solid black;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: black;
+    background-color: bisque;
+}
+
+.para {
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+}
+
+.box {
+    border: 2px solid black;
+    text-align: center;
+    background-color: bisque;
+    align-items: center;
+    max-width: 400px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex inline-block;
+    justify-content: center;
+}
+.nsx-link {
+    color: darkblue;
+    text-decoration: underline;
+}
+
+.nsx-link:link {
+    color: green;
+}
+
+.nsx-link:visited {
+    color: blueviolet;
+}
+
+.nsx-link:hover {
+    color: aqua;
+    cursor: pointer;
+}
+
+.nsx-link:active {
+    color: yellow;
+}
+
+#video_container {
+    position: relative;
+    display: block;
+    width: 25%;
+    height: auto;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.video-container {
+    width: 25%;
+    height: auto;
+    margin: auto;
+}
+
+#nsx_2 {
+    width: 360px;
+    height: 640px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.top-center {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    translate: translate(-50%, -50%);
+    padding: 10px;
+    z-index: 6;
+    color: black;
+}
+
+.video-overlay {
+    position: relative;
+}
