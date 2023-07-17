@@ -28,7 +28,7 @@ img {
 }
 
 #footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -36,7 +36,7 @@ img {
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 10px;
-  }
+}
   
 
 table,
@@ -117,8 +117,8 @@ th {
 }
 
 .text {
-    background-color: #04AA6D;
-    color: white;
+    background-color: bisque;
+    color: black;
     font-size: 16px;
     padding: 16px 32px;
 }
@@ -172,7 +172,11 @@ th {
     margin-left: 5px;
     margin-right: 5px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 .row {
     display: flex;
@@ -187,6 +191,7 @@ th {
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
     display: flex inline-block;
     justify-content: center;
 }
@@ -238,6 +243,7 @@ th {
     justify-content: center;
     align-items: center;
     z-index: 5;
+    border: solid black;
 }
 
 .top-center {
@@ -261,7 +267,7 @@ th {
     align-items: center;
     justify-content: flex-start;
     min-height: 25vh;
-    padding-bottom: 25px; /* Adjust this value as needed */
+    padding-bottom: 25px;
     box-sizing: border-box;
 }
 
@@ -342,5 +348,6 @@ th {
 }
 
 .rsvp {
-    color: bis;
+    color: black;
+    background-color: bisque;
 }
