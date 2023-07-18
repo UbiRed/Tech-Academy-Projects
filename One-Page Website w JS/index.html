@@ -5,9 +5,11 @@
 		<meta charset="utf-8">
         <link rel="stylesheet" href="./css/style.css" >
         <link rel="stylesheet" href="./css/one_page_website_animations.css">
+        <script src="./js/one_page_website.js"></script>
 	</head>
 	<body>
 
+        <div id="home"></div>
         <!--Start Background-->
         <video autoplay muted loop id="background-video">
             <source src="./video/nsx.mp4" type="video/mp4">
@@ -17,12 +19,13 @@
         <!--Start Nav-->
         <div class="navbar">
             <a href="#home">Home</a>
-            <a href="#stats">Stats</a>
             <a href="#history">History</a>
+            <a href="#news">Learn more!</a>
         </div>
         <!--End Nav-->
 
         <!--Start Image-->
+        <div id="stats"></div>
         <div class="container">
             <img src="./img/nsx.jpg" alt="Acura NSX LBW-Widebody" class="center">
         <div class="middle">Acura NSX LBW-Widebody</div>
@@ -30,7 +33,8 @@
         <!--End Image-->
 
         <!--Start Table-->
-        <div id="history">
+        <div id="history"></div>
+        <div>
             <table>
                 <tr>
                     <th>Year</th>
@@ -92,10 +96,103 @@
         </div>
         <!--End Video Overlay-->
 
+        <!--Start lightbox-->
+
+        <!--images used in light box-->
+        <div class="row">
+            <div class="column">
+                <div class="photo-container">
+                    <img src="./img/img1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="photo-container">
+                    <img src="./img/img2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="photo-container">
+                    <img src="./img/img3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="photo-container">
+                    <img src="./img/img4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                </div>
+            </div>
+
+        </div>
+        <!--end images used in light box-->
+
+        <!--start modal/lightbox-->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="./img/img1.jpg" style="width: 100%">
+                    <p class="caption">@N_S_X &#x1F4F7; Champion White, 2005 Honda NSX-R</p>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="./img/img2.jpg" style="width: 100%">
+                    <p class="caption">@N_S_X &#x1F4F7; Champion White, 2005 Honda NSX-R</p>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="./img/img3.jpg" style="width: 100%">
+                    <p class="caption">@N_S_X &#x1F4F7; Champion White, 2005 Honda NSX-R and a 2017 NSX hybrid in Apex Pearl Blue</p>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="./img/img4.jpg" style="width: 100%">
+                    <p class="caption">@N_S_X &#x1F4F7; Champion White, 2005 Honda NSX-R</p>
+                </div>
+
+                <!--next/previous controls-->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <!--end next/prev controls-->
+
+                <!--caption text-->
+                <div class="capion-container">
+                    <p id="caption"></p>
+                </div>
+                <!--end caption text-->
+
+                <!--thumbnail image controls-->
+                <div class="column">
+                    <img class="demo" src="./img/img1.jpg" onclick="currentSlide(1)" alt="Nature">
+                </div>
+                <div class="column">
+                    <img class="demo" src="./img/img2.jpg" onclick="currentSlide(1)" alt="Nature">
+                </div>
+                <div class="column">
+                    <img class="demo" src="./img/img3.jpg" onclick="currentSlide(1)" alt="Nature">
+                </div>
+                <div class="column">
+                    <img class="demo" src="./img/img4.jpg" onclick="currentSlide(1)" alt="Nature">
+                </div>
+                <!--end thumbnail image controls-->
+
+            </div>
+        </div>
+        <!--end modal/lightbox-->
+
+        <!--end light box-->
+
         <!--Start Link Text-->
         <div class="box">
             <h3>Honda's History of Supercars</h3>
-            <p class="nsx-link"><a href="https://global.honda/heritage/episodes/1990thensx.html">https://global.honda/heritage/episodes/1990thensx.html</a></p>
+            <p class="nsx-link"><a href="https://global.honda/heritage/episodes/1990thensx.html">
+                https://global.honda/heritage/episodes/1990thensx.html</a></p>
         </div>
         <!--End Link Text-->
 
@@ -103,7 +200,7 @@
 		<section id="contact">
 			<div class="container">
 				<div class="heading-padding">
-					<h1 class="heading-padding">Reservations</h1>
+					<h1 class="heading-padding">JDM NEWS</h1>
 					<div class="reservation">
 						<h2><span>Want to learn more about these classic JDM legend's?</span>
 							<br />Subscribe to our newsletter!
@@ -130,6 +227,7 @@
 				</div>
 			</div>
 		</section>
+        <div id="news"></div>
 		<!-- End RSVP -->
 
         <!-- Footer -->

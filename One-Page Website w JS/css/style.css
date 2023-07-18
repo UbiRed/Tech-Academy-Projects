@@ -58,7 +58,6 @@ th {
 }
 
 .container {
-    position: relative;
     text-align: center;
     color: bisque;
     margin-top: 100px;
@@ -158,6 +157,14 @@ th {
 }
 
 .column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    overflow: hidden;
     flex: 50%;
     border: solid black;
     margin-left: 5px;
@@ -166,6 +173,16 @@ th {
     margin-bottom: 20px;
     color: black;
     background-color: bisque;
+    float: left;
+    width: 25%;
+}
+
+.column .photo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
 }
 
 .para {
@@ -278,7 +295,6 @@ th {
     margin: 0px auto;
     background-color: bisque;
     box-shadow:-1px -1px 1px 0 rgba(0, 0, 0, 1), 1px 2px 10px 0 rgba(0, 0, 0, 0.5);
-    
 }
 
 .reservation h2 {
@@ -350,4 +366,152 @@ th {
 .rsvp {
     color: black;
     background-color: bisque;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  
+  /* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+  
+  /* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 900px;
+}
+  
+  /* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+  
+  /* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+  
+  /* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+  
+  /* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+  
+  /* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+  
+  /* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+  
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: rgba(0, 0, 0, .25);
+  color: bisque;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 8px;
+}
+  
+img.demo {
+   opacity: 0.6;
+}
+  
+.active, .demo:hover {
+   opacity: 1;
+}
+  
+img.hover-shadow {
+    transition: 0.3s;
+}
+  
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.column img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    padding-top: 10%;
+    align-items: center;
+}
+
+.photo-container {
+  width: 200px; /* Adjust the width to your desired size */
+  height: 200px; /* Adjust the height to your desired size */
+}
+  
+.photo-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+  flex: 50%;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: black;
 }
