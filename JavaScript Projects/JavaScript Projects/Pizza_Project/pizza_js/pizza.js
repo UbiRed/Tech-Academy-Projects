@@ -33,14 +33,14 @@ function getReceipt() {
 };
 
 function getTopping(runningTotal,text1) {
-    var getTopping = 0;
+    var toppingTotal = 0;
     var selectedTopping = [];
     var toppingArray =document.getElementsByClassName("toppings");
     for (var j = 0; j < toppingArray.length; j++) {
         if (toppingArray[j].checked) {
             selectedTopping.push(toppingArray[j].value);
             console.log("slected topping item: ("+toppingArray[j].value+")");
-            ext1 = text1+toppingArray[j].value+"<br>";
+            text1 = text1+toppingArray[j].value+"<br>";
         }
     }
     var toppingCount = selectedTopping.length;
