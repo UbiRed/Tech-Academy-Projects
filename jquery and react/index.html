@@ -1,14 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>Jquery and React</title>
-		<meta charset="utf-8" name="viewpoint" content="width=device-width" />
-        <link rel="stylesheet" href="./css/basic.css">
-        <script src="./js/basic.js"></script>
-	</head>
-	<body>
-	
-        
-	
-	</body>
-</html>
+<html>
+
+    <head>
+    <title>Simple DOM Manipulation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    </head>
+
+<body>
+
+
+  <div id="content">
+    <h1>Hello, DOM!</h1>
+    <p id="4">This is a simple example of using the DOM.</p>
+  </div>
+
+  <button onclick="changeText()">Change Text</button>
+
+  <script>
+    function changeText() {
+      // Get the element with id "content"
+      const contentDiv = document.getElementById("content");
+
+      // Create a new heading element
+      const newHeading = document.createElement("h2");
+      newHeading.textContent = "Updated Heading";
+
+      // Create a new paragraph element
+      const newParagraph = document.createElement("p");
+      newParagraph.textContent = "This paragraph was added dynamically.";
+
+      // Append the new elements to the "content" div
+      contentDiv.appendChild(newHeading);
+      contentDiv.appendChild(newParagraph);
+    }
+  </script>
+
+  <script>
+
+  $(document).ready(function(){
+    $("html").append(
+        "<body>\
+            <div id='container'>\
+                <div id='inner'\
+                <h1>Basic jQuery</h1>\
+                <p id='1'>para 1</p>\
+                <p id='2'>para 2</p>\
+                <p id='3'>para 3</p>\
+            </div>\
+        </body>"  
+    );
+
+    $("p").css({"color":"red"});
+
+    $("#2").css({"color":"blue"});
+
+    $("#3").click(function() {
+        $('h1').hide();
+    });
+
+    $("#1").click(function() {
+        $('h1').show();
+    });
+
+    $("h1").click(function() {
+        $('#2').fadeOut(1500);
+    });
+
+    $("#4").click(function() {
+        $('#2').fadeIn(1500);
+    });
+
+  });
+
+  </script>
+
+
+</body>
+</html> 
